@@ -3,7 +3,6 @@ Install Docker Compose
 
 Ansible role to install Docker Compose on local machine
 
-You can see example how to make playbook, configuration and sample commands here https://github.com/winggundamth/ansible-wing-playbook
 
 Requirements
 ------------
@@ -15,7 +14,7 @@ Role Variables
 
 ```yaml
 # This is default variables
-docker_compose_install_version: 1.7.1
+docker_compose_install_version: 1.29.2
 docker_compose_install_url: https://github.com/docker/compose/releases/download/{{ docker_compose_install_version }}/docker-compose-{{ ansible_system }}-{{ ansible_architecture }}
 docker_compose_install_path: /usr/local/bin/docker-compose
 ```
@@ -34,7 +33,7 @@ Example Playbook
   gather_facts: yes
   become: false
   roles:
-    - role: winggundamth.docker_compose
+    - role: opsta.docker_compose
   vars_files:
     - "{{ docker_compose_vars_file }}"
 ```
@@ -49,4 +48,4 @@ MIT
 Author Information
 ------------------
 
-You can see my works at https://github.com/winggundamth
+Opsta (Thailand) Co.,Ltd.
